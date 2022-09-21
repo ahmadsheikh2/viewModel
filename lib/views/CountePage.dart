@@ -1,6 +1,5 @@
-import 'package:counter_app/view_model/modelView.dart';
+import 'package:counter_app/view_model/view-model.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
 
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,10 +10,7 @@ class CounterPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    //var vm = ViewModel();
-    //final counter = ref.watch(textValue);
-    //final model = ref.read(textValue.notifier).state;
-    final viewModel = ref.read(ViewModelProvider.notifier);
+    final viewModel = ref.read(viewModelProvider.notifier);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
